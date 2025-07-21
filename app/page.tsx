@@ -1,4 +1,3 @@
-```tsx
 "use client"
 
 import { useState, useEffect } from "react"
@@ -71,6 +70,7 @@ export default function MAMDeliveryWebsite() {
           <div className="flex items-center justify-between">
             {/* Logo and Company Name */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-4">
+              {/* Logo */}
               <div className="w-12 h-12 bg-gradient-to-r from-[#00B0E4] to-[#3583DD] rounded-full flex items-center justify-center">
                 <Truck className="w-6 h-6 text-white" />
               </div>
@@ -90,11 +90,11 @@ export default function MAMDeliveryWebsite() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px - 4 py - 2 rounded - full transition - all duration - 300 font - semibold ${
-  activeSection === item.id
-    ? "bg-gradient-to-r from-[#00B0E4] to-[#3583DD] text-white shadow-lg"
-    : "text-white hover:bg-[#00B0E4]/20 hover:text-[#00B0E4]"
-} `}
+                  className={`px-4 py-2 rounded-full transition-all duration-300 font-semibold ${
+                    activeSection === item.id
+                      ? "bg-gradient-to-r from-[#00B0E4] to-[#3583DD] text-white shadow-lg"
+                      : "text-white hover:bg-[#00B0E4]/20 hover:text-[#00B0E4]"
+                  }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -169,8 +169,8 @@ export default function MAMDeliveryWebsite() {
                 delay: Math.random() * 2,
               }}
               style={{
-                left: `${ Math.random() * 100 }% `,
-                top: `${ Math.random() * 100 }% `,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
               }}
             />
           ))}
@@ -257,7 +257,7 @@ export default function MAMDeliveryWebsite() {
               </motion.div>
             </motion.div>
 
-            {/* Right Side - Placeholder Image */}
+            {/* Right Side - Astronaut Image */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -276,14 +276,16 @@ export default function MAMDeliveryWebsite() {
                 }}
                 className="relative"
               >
+                {/* Astronaut on Motorcycle Illustration */}
                 <div className="w-80 h-80 bg-gradient-to-br from-[#00B0E4]/20 to-[#7C46D3]/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
                   <div className="text-center">
-                    <div className="text-8xl mb-4">🚚</div>
-                    <div className="text-6xl">📦</div>
+                    <div className="text-8xl mb-4">🚀</div>
+                    <div className="text-6xl">🏍️</div>
                     <div className="text-white/80 font-semibold mt-4">Fast Delivery!</div>
                   </div>
                 </div>
 
+                {/* Floating Elements Around */}
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
@@ -299,6 +301,7 @@ export default function MAMDeliveryWebsite() {
           </div>
         </div>
 
+        {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
@@ -357,7 +360,7 @@ export default function MAMDeliveryWebsite() {
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
-                    className={`p - 4 rounded - full bg - gradient - to - r ${ stat.gradient } `}
+                    className={`p-4 rounded-full bg-gradient-to-r ${stat.gradient}`}
                   >
                     {stat.icon}
                   </motion.div>
@@ -463,7 +466,8 @@ export default function MAMDeliveryWebsite() {
               {
                 icon: <Zap className="w-16 h-16 text-[#00B0E4]" />,
                 title: "1. Fast Delivery",
-                description: "Instant delivery for all types of shipments",
+                description:
+                  "Instant delivery for all types of shipments. Full coverage across all Emirates. Real-time tracking for transparency and peace of mind.",
                 features: ["Full UAE Coverage", "Real-time Tracking", "Same-day Delivery"],
               },
               {
@@ -475,7 +479,8 @@ export default function MAMDeliveryWebsite() {
               {
                 icon: <Users className="w-16 h-16 text-[#7C46D3]" />,
                 title: "3. Monthly Contracts",
-                description: "Professional drivers (with or without motorcycles) available to support your business needs",
+                description:
+                  "Professional drivers (with or without motorcycles) available to support your business needs",
                 features: ["Dedicated Drivers", "Flexible Terms", "Business Support"],
               },
               {
@@ -671,4 +676,3 @@ export default function MAMDeliveryWebsite() {
     </div>
   )
 }
-```
