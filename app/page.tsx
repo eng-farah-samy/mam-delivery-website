@@ -21,7 +21,6 @@ import {
   Globe,
   Clock,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export default function MAMDeliveryWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -236,25 +235,23 @@ px - 4 py - 2 rounded - full transition - all duration - 300 font - semibold fon
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.1 }}
               >
-                <Button
+                <button
                   className="bg-gradient-to-r from-mam-sky to-mam-blue hover:from-mam-blue hover:to-mam-purple text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300"
                   onClick={() => scrollToSection("services")}
                 >
                   ✅ Book Now
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-mam-sky text-mam-sky hover:bg-mam-sky hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
+                </button>
+                <button
+                  className="border border-mam-sky text-mam-sky hover:bg-mam-sky hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
                   onClick={() => scrollToSection("contact")}
                 >
                   ✅ Contact Us
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-mam-purple text-mam-purple hover:bg-mam-purple hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
+                </button>
+                <button
+                  className="border border-mam-purple text-mam-purple hover:bg-mam-purple hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
                 >
                   ✅ Track Your Shipment
-                </Button>
+                </button>
               </motion.div>
             </motion.div>
 
@@ -283,7 +280,7 @@ px - 4 py - 2 rounded - full transition - all duration - 300 font - semibold fon
                     <div className="text-6xl">📦</div>
                     <div className="text-mam-white/80 font-semibold mt-4 font-source-sans">Fast Delivery!</div>
                   </div>
-                </div>
+                </motion.div>
 
                 <motion.div
                   animate={{ rotate: 360 }}
