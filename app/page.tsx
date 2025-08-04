@@ -73,7 +73,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-r from-mam-sky to-mam-blue rounded-full flex items-center justify-center">
                 <Truck className="w-6 h-6 text-mam-white" />
               </div>
-              <div className="text-2xl font-bold text-mam-white font-display">
+              <div className="text-2xl font-bold text-mam-white font-arial-rounded">
                 MAM Delivery
               </div>
             </motion.div>
@@ -88,7 +88,7 @@ export default function Home() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-full transition-all duration-300 font-semibold font-sans ${
+                  className={`px-4 py-2 rounded-full transition-all duration-300 font-semibold font-source-sans ${
                     activeSection === item.id
                       ? "bg-gradient-to-r from-mam-sky to-mam-blue text-mam-white shadow-lg"
                       : "text-mam-white hover:bg-mam-sky/20 hover:text-mam-sky"
@@ -131,7 +131,7 @@ export default function Home() {
                   <motion.button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left text-mam-white hover:text-mam-sky transition-colors font-semibold font-sans"
+                    className="block w-full text-left text-mam-white hover:text-mam-sky transition-colors font-semibold font-source-sans"
                     whileHover={{ x: 10 }}
                   >
                     {item.label}
@@ -182,7 +182,7 @@ export default function Home() {
               className="text-center lg:text-left"
             >
               <motion.h1
-                className="text-5xl md:text-7xl font-bold text-mam-white mb-6 font-display animate-gradient"
+                className="text-5xl md:text-7xl font-bold text-mam-white mb-6 font-arial-rounded animate-gradient"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -194,7 +194,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                className="text-xl md:text-2xl text-mam-sky mb-4 font-sans"
+                className="text-xl md:text-2xl text-mam-sky mb-4 font-source-sans"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
@@ -203,7 +203,7 @@ export default function Home() {
               </motion.p>
 
               <motion.p
-                className="text-lg text-mam-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-sans"
+                className="text-lg text-mam-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-source-sans"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
@@ -217,11 +217,11 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 }}
               >
-                <span className="text-mam-sky font-semibold font-sans">Fast</span>
+                <span className="text-mam-sky font-semibold font-source-sans">Fast</span>
                 <span className="text-mam-white">•</span>
-                <span className="text-mam-sky font-semibold font-sans">Reliable</span>
+                <span className="text-mam-sky font-semibold font-source-sans">Reliable</span>
                 <span className="text-mam-white">•</span>
-                <span className="text-mam-sky font-semibold font-sans">Professional</span>
+                <span className="text-mam-sky font-semibold font-source-sans">Professional</span>
               </motion.div>
 
               <motion.div
@@ -231,21 +231,21 @@ export default function Home() {
                 transition={{ delay: 1.1 }}
               >
                 <button
-                  className="bg-gradient-to-r from-mam-sky to-mam-blue hover:from-mam-blue hover:to-mam-purple text-mam-white px-8 py-3 rounded-full font-semibold font-sans transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-mam-sky to-mam-blue hover:from-mam-blue hover:to-mam-purple text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300"
                   onClick={() => scrollToSection("services")}
                   aria-label="Book delivery service"
                 >
                   Book Now
                 </button>
                 <button
-                  className="border border-mam-sky text-mam-sky hover:bg-mam-sky hover:text-mam-white px-8 py-3 rounded-full font-semibold font-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
+                  className="border border-mam-sky text-mam-sky hover:bg-mam-sky hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
                   onClick={() => scrollToSection("contact")}
                   aria-label="Contact us"
                 >
                   Contact Us
                 </button>
                 <button
-                  className="border border-mam-purple text-mam-purple hover:bg-mam-purple hover:text-mam-white px-8 py-3 rounded-full font-semibold font-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
+                  className="border border-mam-purple text-mam-purple hover:bg-mam-purple hover:text-mam-white px-8 py-3 rounded-full font-semibold font-source-sans transform hover:scale-105 transition-all duration-300 bg-transparent"
                   onClick={() => alert("Tracking functionality not implemented")}
                   aria-label="Track your shipment"
                 >
@@ -276,7 +276,7 @@ export default function Home() {
                   <div className="text-center">
                     <Truck className="w-24 h-24 mb-4 text-mam-white" />
                     <div className="text-6xl">📦</div>
-                    <div className="text-mam-white/80 font-semibold mt-4 font-sans">Fast Delivery!</div>
+                    <div className="text-mam-white/80 font-semibold mt-4 font-source-sans">Fast Delivery!</div>
                   </div>
                 </motion.div>
 
@@ -359,12 +359,12 @@ export default function Home() {
                 </motion.div>
               </div>
               <motion.div
-                className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-mam-black to-mam-dark-purple bg-clip-text text-transparent font-display"
+                className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-mam-black to-mam-dark-purple bg-clip-text text-transparent font-arial-rounded"
                 whileHover={{ scale: 1.1 }}
               >
                 {stat.number}
               </motion.div>
-              <div className="text-mam-dark-purple font-semibold text-lg font-sans">{stat.label}</div>
+              <div className="text-mam-dark-purple font-semibold text-lg font-source-sans">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -381,8 +381,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-mam-black mb-6 font-display">About Us</h2>
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-mam-dark-purple font-sans">
+          <h2 className="text-4xl md:text-5xl font-bold text-mam-black mb-6 font-arial-rounded">About Us</h2>
+          <div className="max-w-4xl mx-auto space-y-6 text-lg text-mam-dark-purple font-source-sans">
             <p className="font-semibold text-xl">Who We Are:</p>
             <p>
               MAM Delivery is a specialized delivery company based in the United Arab Emirates, offering comprehensive
@@ -392,7 +392,7 @@ export default function Home() {
             </p>
             <p>
               Since our establishment, we have built a solid reputation in the UAE by consistently providing
-              exceptional service that meets the evolving demands of today's fast-paced world. Whether it's a single
+              exceptional service that meets the evolving demands of today&apos;s fast-paced world. Whether it&apos;s a single
               package or full-scale freight, we ensure transparency, efficiency, and customer satisfaction at every
               step.
             </p>
@@ -430,8 +430,8 @@ export default function Home() {
               className="bg-mam-white rounded-2xl p-8 shadow-xl border border-mam-sky/20 hover:shadow-2xl transition-all duration-300"
             >
               <div className="mb-6">{item.icon}</div>
-              <h3 className="text-xl font-bold text-mam-black mb-4 font-display">{item.title}</h3>
-              <p className="text-mam-dark-purple font-sans">{item.description}</p>
+              <h3 className="text-xl font-bold text-mam-black mb-4 font-arial-rounded">{item.title}</h3>
+              <p className="text-mam-dark-purple font-source-sans">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -448,8 +448,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-mam-white mb-6 font-display">Our Services</h2>
-          <p className="text-xl text-mam-sky max-w-3xl mx-auto font-sans">
+          <h2 className="text-4xl md:text-5xl font-bold text-mam-white mb-6 font-arial-rounded">Our Services</h2>
+          <p className="text-xl text-mam-sky max-w-3xl mx-auto font-source-sans">
             Comprehensive delivery and logistics solutions tailored to your needs
           </p>
         </motion.div>
@@ -491,13 +491,13 @@ export default function Home() {
               className="bg-mam-white/10 backdrop-blur-md rounded-2xl p-8 border border-mam-white/20 hover:bg-mam-white/20 transition-all duration-300"
             >
               <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-bold text-mam-white mb-4 font-display">{item.title}</h3>
-              <p className="text-mam-white/80 mb-6 font-sans">{service.description}</p>
+              <h3 className="text-xl font-bold text-mam-white mb-4 font-arial-rounded">{service.title}</h3>
+              <p className="text-mam-white/80 mb-6 font-source-sans">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-mam-sky">
                     <CheckCircle className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-sans">{feature}</span>
+                    <span className="text-sm font-source-sans">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -512,7 +512,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="bg-mam-white/10 backdrop-blur-md rounded-3xl p-8 border border-mam-white/20"
         >
-          <h3 className="text-3xl font-bold text-mam-white text-center mb-8 font-display">Why Choose MAM Delivery?</h3>
+          <h3 className="text-3xl font-bold text-mam-white text-center mb-8 font-arial-rounded">Why Choose MAM Delivery?</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: "🚀", title: "Speed & Efficiency", desc: "We deliver fast and with precision" },
@@ -526,8 +526,8 @@ export default function Home() {
             ].map((item, index) => (
               <motion.div key={index} whileHover={{ scale: 1.1 }} className="text-center">
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h4 className="text-lg font-bold text-mam-white mb-2 font-sans">{item.title}</h4>
-                <p className="text-mam-white/80 text-sm font-sans">{item.desc}</p>
+                <h4 className="text-lg font-bold text-mam-white mb-2 font-source-sans">{item.title}</h4>
+                <p className="text-mam-white/80 text-sm font-source-sans">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -545,8 +545,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-mam-black mb-6 font-display">Contact Us</h2>
-          <p className="text-xl text-mam-dark-purple max-w-3xl mx-auto font-sans">
+          <h2 className="text-4xl md:text-5xl font-bold text-mam-black mb-6 font-arial-rounded">Contact Us</h2>
+          <p className="text-xl text-mam-dark-purple max-w-3xl mx-auto font-source-sans">
             Get in touch with us for all your delivery needs
           </p>
         </motion.div>
@@ -585,14 +585,14 @@ export default function Home() {
               >
                 <div className="text-mam-sky">{contact.icon}</div>
                 <div>
-                  <h4 className="font-bold text-mam-black font-display">{contact.title}</h4>
-                  <div className="text-mam-dark-purple font-sans">{contact.info}</div>
+                  <h4 className="font-bold text-mam-black font-arial-rounded">{contact.title}</h4>
+                  <div className="text-mam-dark-purple font-source-sans">{contact.info}</div>
                 </div>
               </motion.div>
             ))}
 
             <div className="pt-8">
-              <h4 className="font-bold text-mam-black mb-4 font-display">Follow us on Social Media:</h4>
+              <h4 className="font-bold text-mam-black mb-4 font-arial-rounded">Follow us on Social Media:</h4>
               <div className="flex flex-wrap gap-4">
                 {["Facebook", "Instagram", "TikTok", "LinkedIn"].map((social, index) => (
                   <motion.a
@@ -602,7 +602,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 bg-gradient-to-r from-mam-sky to-mam-blue text-mam-white rounded-full font-semibold font-sans hover:from-mam-blue hover:to-mam-purple transition-all duration-300"
+                    className="px-4 py-2 bg-gradient-to-r from-mam-sky to-mam-blue text-mam-white rounded-full font-semibold font-source-sans hover:from-mam-blue hover:to-mam-purple transition-all duration-300"
                   >
                     {social}
                   </motion.a>
@@ -618,7 +618,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="bg-mam-white rounded-3xl p-8 shadow-xl border border-mam-sky/20"
           >
-            <h3 className="text-2xl font-bold text-mam-black mb-6 font-display">Frequently Asked Questions (FAQ)</h3>
+            <h3 className="text-2xl font-bold text-mam-black mb-6 font-arial-rounded">Frequently Asked Questions (FAQ)</h3>
             <div className="space-y-6">
               {[
                 {
@@ -646,8 +646,8 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="border-b border-mam-sky/20 pb-4"
                 >
-                  <h4 className="font-bold text-mam-black mb-2 font-display">{faq.q}</h4>
-                  <p className="text-mam-dark-purple font-sans">{faq.a}</p>
+                  <h4 className="font-bold text-mam-black mb-2 font-arial-rounded">{faq.q}</h4>
+                  <p className="text-mam-dark-purple font-source-sans">{faq.a}</p>
                 </motion.div>
               ))}
             </div>
@@ -664,15 +664,15 @@ export default function Home() {
             <div className="w-12 h-12 bg-gradient-to-r from-mam-sky to-mam-blue rounded-full flex items-center justify-center">
               <Truck className="w-6 h-6 text-mam-white" />
             </div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-mam-sky via-mam-blue to-mam-purple bg-clip-text text-transparent font-display">
+            <div className="text-3xl font-bold bg-gradient-to-r from-mam-sky via-mam-blue to-mam-purple bg-clip-text text-transparent font-arial-rounded">
               MAM Delivery
             </div>
           </motion.div>
-          <p className="text-mam-white/80 mb-6 font-sans">
+          <p className="text-mam-white/80 mb-6 font-source-sans">
             Company Start Date: MAM Delivery was founded in 2020 and has since been dedicated to providing trusted
             and innovative logistics solutions throughout the UAE.
           </p>
-          <div className="flex justify-center space-x-8 text-sm text-mam-white/60 font-sans">
+          <div className="flex justify-center space-x-8 text-sm text-mam-white/60 font-source-sans">
             <span>Speed • Precision • Trust</span>
           </div>
         </div>
