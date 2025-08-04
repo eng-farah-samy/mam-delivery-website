@@ -1,29 +1,29 @@
-// app/components/MAMDeliveryWebsite.jsx
+// app/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
-  TruckIcon,
-  ShieldCheckIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ChevronDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-  CheckCircleIcon,
-  UserGroupIcon,
-  BoltIcon,
-  TargetIcon,
-  HeartIcon,
-  ChatBubbleLeftIcon,
-  CalendarIcon,
-  GlobeAltIcon,
-  ClockIcon,
-} from "@heroicons/react/24/outline";
+  Truck,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronDown,
+  Menu,
+  X,
+  CheckCircle,
+  Users,
+  Zap,
+  Target,
+  Heart,
+  MessageCircle,
+  Calendar,
+  Globe,
+  Clock,
+} from "lucide-react";
 
-export default function MAMDeliveryWebsite() {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const { scrollYProgress } = useScroll();
@@ -50,7 +50,7 @@ export default function MAMDeliveryWebsite() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -71,7 +71,7 @@ export default function MAMDeliveryWebsite() {
           <div className="flex items-center justify-between">
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-mam-sky to-mam-blue rounded-full flex items-center justify-center">
-                <TruckIcon className="w-6 h-6 text-mam-white" />
+                <Truck className="w-6 h-6 text-mam-white" />
               </div>
               <div className="text-2xl font-bold text-mam-white font-display">
                 MAM Delivery
@@ -108,7 +108,7 @@ export default function MAMDeliveryWebsite() {
               className="md:hidden text-mam-white"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMenuOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function MAMDeliveryWebsite() {
               >
                 <div className="w-80 h-80 bg-gradient-to-br from-mam-sky/20 to-mam-purple/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-mam-white/20">
                   <div className="text-center">
-                    <TruckIcon className="w-24 h-24 mb-4 text-mam-white" />
+                    <Truck className="w-24 h-24 mb-4 text-mam-white" />
                     <div className="text-6xl">📦</div>
                     <div className="text-mam-white/80 font-semibold mt-4 font-sans">Fast Delivery!</div>
                   </div>
@@ -300,7 +300,7 @@ export default function MAMDeliveryWebsite() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ChevronDownIcon className="text-mam-sky w-8 h-8" />
+          <ChevronDown className="text-mam-sky w-8 h-8" />
         </motion.div>
       </section >
 
@@ -318,25 +318,25 @@ export default function MAMDeliveryWebsite() {
             {
               number: "2020",
               label: "Founded",
-              icon: <CalendarIcon className="w-8 h-8 text-mam-sky" />,
+              icon: <Calendar className="w-8 h-8 text-mam-sky" />,
               gradient: "from-mam-sky to-mam-blue",
             },
             {
               number: "1000+",
               label: "Happy Clients",
-              icon: <UserGroupIcon className="w-8 h-8 text-mam-blue" />,
+              icon: <Users className="w-8 h-8 text-mam-blue" />,
               gradient: "from-mam-blue to-mam-purple",
             },
             {
               number: "7",
               label: "Emirates Covered",
-              icon: <GlobeAltIcon className="w-8 h-8 text-mam-purple" />,
+              icon: <Globe className="w-8 h-8 text-mam-purple" />,
               gradient: "from-mam-purple to-mam-dark-purple",
             },
             {
               number: "24/7",
               label: "Support",
-              icon: <ClockIcon className="w-8 h-8 text-mam-dark-purple" />,
+              icon: <Clock className="w-8 h-8 text-mam-dark-purple" />,
               gradient: "from-mam-dark-purple to-mam-black",
             },
           ].map((stat, index) => (
@@ -402,19 +402,19 @@ export default function MAMDeliveryWebsite() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
-              icon: <TargetIcon className="w-12 h-12 text-mam-sky" />,
+              icon: <Target className="w-12 h-12 text-mam-sky" />,
               title: "Our Vision",
               description:
                 "To be the leading delivery and logistics provider in the UAE, recognized for our speed, reliability, and customer-focused approach.",
             },
             {
-              icon: <BoltIcon className="w-12 h-12 text-mam-blue" />,
+              icon: <Zap className="w-12 h-12 text-mam-blue" />,
               title: "Our Mission",
               description:
                 "To simplify and enhance the delivery experience by offering professional, cost-effective, and technology-driven solutions that meet the growing needs of individuals and businesses in the UAE.",
             },
             {
-              icon: <HeartIcon className="w-12 h-12 text-mam-purple" />,
+              icon: <Heart className="w-12 h-12 text-mam-purple" />,
               title: "Our Core Values",
               description:
                 "Speed & Precision – Timely and accurate deliveries every time. Reliability – A trusted partner for clients across various industries. Professionalism – Highly trained drivers and staff dedicated to exceptional service. Wide Coverage – Serving businesses and individuals throughout the UAE.",
@@ -457,25 +457,25 @@ export default function MAMDeliveryWebsite() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {[
             {
-              icon: <BoltIcon className="w-16 h-16 text-mam-sky" />,
+              icon: <Zap className="w-16 h-16 text-mam-sky" />,
               title: "1. Fast Delivery",
               description: "Instant delivery for all types of shipments",
               features: ["Full UAE Coverage", "Real-time Tracking", "Same-day Delivery"],
             },
             {
-              icon: <TruckIcon className="w-16 h-16 text-mam-blue" />,
+              icon: <Truck className="w-16 h-16 text-mam-blue" />,
               title: "2. Land Freight",
               description: "Safe and efficient transportation of goods between cities and regions",
               features: ["Inter-city Transport", "Bulk Shipments", "Secure Handling"],
             },
             {
-              icon: <UserGroupIcon className="w-16 h-16 text-mam-purple" />,
+              icon: <Users className="w-16 h-16 text-mam-purple" />,
               title: "3. Monthly Contracts",
               description: "Professional drivers (with or without motorcycles) available to support your business needs",
               features: ["Dedicated Drivers", "Flexible Terms", "Business Support"],
             },
             {
-              icon: <ShieldCheckIcon className="w-16 h-16 text-mam-dark-purple" />,
+              icon: <Shield className="w-16 h-16 text-mam-dark-purple" />,
               title: "4. Car Parking & Valet Services",
               description: "Professional parking and valet solutions to enhance customer convenience",
               features: ["Car Parking", "Valet Service", "Customer Convenience"],
@@ -491,12 +491,12 @@ export default function MAMDeliveryWebsite() {
               className="bg-mam-white/10 backdrop-blur-md rounded-2xl p-8 border border-mam-white/20 hover:bg-mam-white/20 transition-all duration-300"
             >
               <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-bold text-mam-white mb-4 font-display">{service.title}</h3>
+              <h3 className="text-xl font-bold text-mam-white mb-4 font-display">{item.title}</h3>
               <p className="text-mam-white/80 mb-6 font-sans">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-mam-sky">
-                    <CheckCircleIcon className="w-4 h-4 mr-2" />
+                    <CheckCircle className="w-4 h-4 mr-2" />
                     <span className="text-sm font-sans">{feature}</span>
                   </li>
                 ))}
@@ -560,13 +560,22 @@ export default function MAMDeliveryWebsite() {
             className="space-y-8"
           >
             {[
-              { icon: <MapPinIcon className="w-6 h-6" />, title: "Location", info: "United Arab Emirates" },
-              { icon: <EnvelopeIcon className="w-6 h-6" />, title: "Email", info: "info@mamdelivery.com" },
-              { icon: <PhoneIcon className="w-6 h-6" />, title: "Phone", info: "+971 4 123 4567" },
+              { icon: <MapPin className="w-6 h-6" />, title: "Location", info: "United Arab Emirates" },
+              { icon: <Mail className="w-6 h-6" />, title: "Email", info: "info@mamdelivery.com" },
+              { icon: <Phone className="w-6 h-6" />, title: "Phone", info: "+971 4 123 4567" },
               {
-                icon: <ChatBubbleLeftIcon className="w-6 h-6" />,
+                icon: <MessageCircle className="w-6 h-6" />,
                 title: "WhatsApp",
-                info: <a href="https://wa.me/97141234567" className="text-mam-dark-purple hover:text-mam-sky">Click Here</a>,
+                info: (
+                  <a
+                    href="https://wa.me/97141234567"
+                    className="text-mam-dark-purple hover:text-mam-sky"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Click Here
+                  </a>
+                ),
               },
             ].map((contact, index) => (
               <motion.div
@@ -653,7 +662,7 @@ export default function MAMDeliveryWebsite() {
         <div className="text-center">
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center justify-center space-x-4 mb-4">
             <div className="w-12 h-12 bg-gradient-to-r from-mam-sky to-mam-blue rounded-full flex items-center justify-center">
-              <TruckIcon className="w-6 h-6 text-mam-white" />
+              <Truck className="w-6 h-6 text-mam-white" />
             </div>
             <div className="text-3xl font-bold bg-gradient-to-r from-mam-sky via-mam-blue to-mam-purple bg-clip-text text-transparent font-display">
               MAM Delivery
